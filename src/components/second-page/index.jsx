@@ -1,7 +1,7 @@
 import { SecondPagePart, SecondPagePartContext } from "./styled";
 import { Container } from "../../GlobalStyle";
 import Sign from "../../assets/vectors/sign.png";
-import Photo1 from "../../assets/image/photo1.JPG";
+import Photo1 from "../../assets/image/photo1.jpg";
 
 export const SecondPage = () => {
   return (
@@ -20,9 +20,9 @@ export const SecondPage = () => {
           data-aos="fade-right"
           src={Photo1}
           alt="Photo 1"
-          className="rounded-[15px]"
+          className="rounded-[15px] grayscale"
         />
-        <h2>19.06.2026</h2>
+        <h2>14.06.2026</h2>
       </Container>
     </SecondPagePart>
   );

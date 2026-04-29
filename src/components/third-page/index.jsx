@@ -6,14 +6,10 @@ import {
 } from "./styled";
 import { Container } from "../../GlobalStyle";
 import SvgChurch from "../../assets/vectors/church.png";
-import Church from "../../assets/image/church.avif";
+import Church from "../../assets/image/church.jpg";
 import Restaurant from "../../assets/image/restoran.jpg";
 import SvgRing from "../../assets/vectors/ring.png";
 import SvgCouple from "../../assets/vectors/cup.png";
-import SerLiqySer from "../../assets/image/serliqyser.png";
-import PhotoGroup1 from "../../assets/image/groupphoto1.JPG";
-import PhotoGroup2 from "../../assets/image/groupphoto2.JPG";
-import PhotoGroup3 from "../../assets/image/groupphoto3.JPG";
 import { ForthPagePartContext, ForthPagePart } from "../forth-page/styled";
 import { ForthPageBlock } from "../forth-page/fortg-page-block";
 import { ThirdPageBlock } from "./third-page-block";
@@ -30,13 +26,12 @@ export const ThirdPage = () => {
             ImageSrc={SvgRing}
             number={"11:00"}
             bigText="ՀԱՐՍԻ ՏՈՒՆ"
-            smallText="ք.Սևան , Շահումյան 10ա"
           />
           <ThirdPageBlock
             ImageSrc={SvgChurch}
             number={"15:00"}
             bigText="ՊՍԱԿԱԴՐՈՒԹՅՈՒՆ"
-            smallText="Սուրբ Գրիգոր Լուսավորիչ"
+            smallText="Սուրբ Հովհաննես եկեղեցի"
           />
 
           <ThirdPageBlock
@@ -46,46 +41,25 @@ export const ThirdPage = () => {
             ImageSrc={SvgCouple}
             number={"17:30"}
             bigText="ՀԱՐՍԱՆՅԱՑ ՀԱՆԴԻՍՈՒԹՅՈՒՆ"
-            smallText="Հրաշք Այգի ռեստորան"
+            smallText="Ադանա Ռեստորանային Համալիր"
           />
         </ThirdPagePartContext>
         <ForthPagePartContext>
           <ForthPageBlock
             ImageSrc={Church}
-            bigText={"Սուրբ Գրիգոր Լուսավորիչ"}
-            mapSrc={"https://maps.app.goo.gl/xC2iH7GaFDXZNsh89"}
+            bigText={"Սուրբ Հովհաննես եկեղեցի"}
+            mapSrc={
+              "https://www.bing.com/maps/search?v=2&pc=FACEBK&mid=8100&mkt=en-US&fbclid=IwY2xjawRe7ftleHRuA2FlbQIxMABicmlkETExZHZnTmMxQVlta1VySjE1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnYUDVjZff5Tb0nGwD8EF1Ey7yp9rSS_VJGslzJFtmQ6BtO6Jnuu69ThQbpE_aem_gz0se2I_KHfTjYlQEfuMvg&FORM=FBKPL1&q=%D5%80%D5%80%2C+%D6%84.+%D4%B1%D6%80%D5%BF%D5%A1%D5%B7%D5%A1%D5%BF%2C+%D4%B5%D6%80%D6%87%D5%A1%D5%B6%D5%B5%D5%A1%D5%B6+%D5%AD%D5%B3%D5%B8%D6%82%D5%B2%D5%AB%2C+Artashat%2C+Armenia&cp=40.032292%7E44.473250&lvl=16&style=r"
+            }
           />
           <ForthPageBlock
             ImageSrc={Restaurant}
-            bigText={"Հրաշք Այգի ռեստորան"}
-            mapSrc={"https://maps.app.goo.gl/mNLpjba1TgPTbT3y7"}
+            bigText={"Ադանա Ռեստորանային Համալիր"}
+            mapSrc={
+              "https://www.bing.com/maps/search?v=2&pc=FACEBK&mid=8100&mkt=en-US&fbclid=IwY2xjawRe7j1leHRuA2FlbQIxMABicmlkETFxd1BrNWpZazJBY1BKR1FSc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHt_CDqN6oz2MVIljzhTqkZWQ-DhN1gn3Y7n3-C6btrz3q1zeWcD8FVHdhNgv_aem_VminMb2Tx_VFq7460a91LA&FORM=FBKPL1&q=Erevan-Erasx+12+km%2C+Mkhchyan+0725%2C+%D0%90%D1%80%D0%BC%D0%B5%D0%BD%D0%B8%D1%8F%2C+Artashat%2C+Armenia&cp=39.957207%7E44.546934&lvl=13.9&style=r"
+            }
           />
         </ForthPagePartContext>
-        <div
-          className="flex h-[100vh] gap-[20px] justify-around"
-          style={{ marginTop: "70px" }}
-        >
-          <div>
-            <img src={SerLiqySer} className="h-[100vh] w-full" />
-          </div>
-          <div className="flex flex-col gap-2">
-            <img
-              src={PhotoGroup1}
-              alt=""
-              className="h-1/3 object-cover rounded-[10px]"
-            />
-            <img
-              src={PhotoGroup2}
-              alt=""
-              className="h-1/3 object-cover rounded-[10px]"
-            />
-            <img
-              src={PhotoGroup3}
-              alt=""
-              className="h-1/3 object-cover rounded-[10px]"
-            />
-          </div>
-        </div>
       </Container>
       <Container>
         <ThirdPagePartMini>
@@ -97,7 +71,7 @@ export const ThirdPage = () => {
         <ThirdPagePartCalendar>
           {[...Array(35)].map((_, i) =>
             i > -1 && i <= 29 ? (
-              <div className={i - 1 == 17 ? "special" : ""}>{i + 1}</div>
+              <div className={i - 1 == 12 ? "special" : ""}>{i + 1}</div>
             ) : (
               <div></div>
             ),

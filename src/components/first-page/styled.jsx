@@ -12,7 +12,7 @@ const FirstPagePart = styled.div`
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: blur(1.5px);
+        filter: blur(3px);
     }
 `
 const FirstPagePartContext = styled.div`
