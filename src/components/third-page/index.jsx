@@ -24,12 +24,12 @@ export const ThirdPage = () => {
             // uniqueMargin={50}
             className="uniqueone"
             ImageSrc={SvgRing}
-            number={"11:00"}
+            number={"12:00"}
             bigText="ՀԱՐՍԻ ՏՈՒՆ"
           />
           <ThirdPageBlock
             ImageSrc={SvgChurch}
-            number={"15:00"}
+            number={"16:30"}
             bigText="ՊՍԱԿԱԴՐՈՒԹՅՈՒՆ"
             smallText="Սուրբ Հովհաննես եկեղեցի"
           />
